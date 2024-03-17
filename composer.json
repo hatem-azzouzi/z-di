@@ -1,0 +1,21 @@
+{
+    "name": "z-di/z-di",
+    "author": "Hatem Azzouzi",
+    "type": "library",
+    "description": "Easy minimalist dependenncy injection package",
+    "keywords": ["di", "dependency injection", "ioc", "proxy", "lazy loading"],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ZDI\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ZDI\\tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.2.0"
+    }
+}
