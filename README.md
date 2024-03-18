@@ -21,7 +21,7 @@ Z-DI is intended for educational purposes for beginners looking to learn more sk
 
 ## Requirements
 
-There is no requirement to install this package other than PHP. PHP >=7.2.0 is recommended. If you are new with PHP, go with PHP 8.3.
+There is no requirement to install this package other than PHP. PHP >=7.2.0 is recommended. PHP 8.3 is highly recommended.
 
 
 ## Installation
@@ -34,15 +34,15 @@ composer require z-di/z-di
 
 ## Usage
 
-### Dependency Injection
+### Dependency Injection (DI)
 
-It is a technique to inject a resource or a service (dependency) into a client on which it depends on to function. Client does not have to create nor to instantiate the resource or to know how it is created.
+DI is a technique to inject a resource or a service (dependency) into a client on which it depends on to function. Client does not have to create nor to instantiate the resource or know how it is created.
 
-Below is an example of a configuration file to create entry points for 2 services and a client. In this example, we have injected the Email service into the Client. we can also inject the Text service.
+Below is an example of a configuration file to create entry points for 2 services and a client. In this example, we inject the Email service into the Client. You can also try the Text service. Both services implements the same interface IMessage.
 
 ```php
-// /conf/config.injection.php
 <?php
+// /conf/config.injection.php
 
 /* @var $this \ZDI\Inject */
 
@@ -100,8 +100,8 @@ Lazy loading a resource is intended to differ loading or instantiating a resourc
 Below is an example of a configuration file to create an entry point for ClassA injection and its constructor parameters.
 
 ```php
-// /conf/config.lazy.php
 <?php
+// /conf/config.lazy.php
 
 /* @var $this \ZDI\Inject */
 
@@ -150,11 +150,11 @@ The ClassA is instantiated **after** making the first *foo()* function call. As 
 
 ### Eager loading
 
-Alternatively, eager loading is to load the resource as soon as the bootstrap has been started. In our example above, instead of just referencing the resource, it will be instantiated using *instance()* function as shown below.
+Alternatively, eager loading is to load the resource as soon as the bootstrap is started. In our example above, instead of just referencing the resource, it will be instantiated using *instance()* function as shown below.
 
 ```php
-// /conf/config.lazy.php
 <?php
+// /conf/config.lazy.php
 
 /* @var $this \ZDI\Inject */
 
@@ -177,7 +177,7 @@ ZDI\tests\ignition\ClassA function called: bar
 
 The ClassA is instantiated **before** making the first *foo()* function call.
 
-**NOTE:** In our injection example above we have used lazy loading, if we rather would like to use eager loading, we need inject the instantiated service when instantiate the client.
+**NOTE:** In our injection example above we have used lazy loading, if we rather would like to use eager loading, we need to inject the instantiated service when instantiating the client.
 
 ```php
 <?php
@@ -248,7 +248,6 @@ ZDI\tests\ignition\ClassA function called: bar
 
 ```php
 [
-
     ZDI\tests\ignition\ClassA::class => $this->create(ZDI\tests\ignition\ClassB::class, 'foo', 'bar'),
 ]
 ```
