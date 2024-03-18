@@ -30,7 +30,7 @@ There is no requirement to install this package other than PHP. PHP >=7.2.0 is r
 Use the dependency manager [composer](https://getcomposer.org/download/) to install Z-DI.
 
 ```bash
-composer require z-di/z-di
+composer require hatem-azzouzi/z-di
 ```
 
 ## Usage
