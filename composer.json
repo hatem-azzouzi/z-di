@@ -1,6 +1,11 @@
 {
     "name": "z-di/z-di",
-    "author": "Hatem Azzouzi",
+    "authors": [
+        {
+            "name": "Hatem Azzouzi",
+            "homepage": "https://www.elasticweb.link/#contact"
+        }
+    ],
     "type": "library",
     "description": "Easy minimalist dependenncy injection package",
     "keywords": ["di", "dependency injection", "ioc", "proxy", "lazy loading"],
