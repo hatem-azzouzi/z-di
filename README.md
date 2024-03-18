@@ -2,17 +2,18 @@
 
 ## Contents of this file
 
- - Introduction
- - Requirements
- - Installation
- - Usage
-   - Dependency Injection
-   - Lazy loading
-   - Eager loading
-   - Recursion
- - Contributing
- - Maintainers
- - License
+ - [Introduction](#introduction)
+ - [Requirements](#requirements)
+ - [Installation](#installation)
+ - [Usage](#usage)
+   - [Dependency Injection](#dependency-injection)
+   - [Lazy loading](#lazy-loading)
+   - [Eager loading](#eager-loading)
+   - [Recursion](#recursion)
+ - [Contributing](#contributing)
+ - [Maintainers](#maintainers)
+ - [License](#license)
+
 
 ## Introduction
 
