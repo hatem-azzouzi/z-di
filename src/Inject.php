@@ -46,7 +46,7 @@ class Inject {
      * 
      * @param string $className
      * @param type $args
-     * @return Proxy
+     * @return mixed
      */
     public function instance(string $className, ...$args) {
         $this->_proxies[$className] = new $className(...$args);
